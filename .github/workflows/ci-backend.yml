@@ -24,17 +24,27 @@ jobs:
       - name: Maven Compile/Test
         working-directory: sgcmapi/
         run: mvn compile test
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04a94a03595dbbc80900bfde4d32ac3ebee93d0a
   merge:
     needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v5
+<<<<<<< HEAD
       - name: filtro de arquivos
         id: filtro
         uses: dorny/paths-filter@v3
         with: 
+=======
+      - name: Filtro de arquivos
+        id: filtro
+        uses: dorny/paths-filter@v3
+        with:
+>>>>>>> 04a94a03595dbbc80900bfde4d32ac3ebee93d0a
           filters: |
             java:
               - '**/*.java'
